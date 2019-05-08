@@ -22,13 +22,14 @@
         <TextView
             android:id="@+id/name_song"
             android:layout_margin="5dp"
-            android:textSize="20dp"
+            android:textSize="15dp"
             android:textColor="#9C27B0"
             android:text="Name Song"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="0dp" />
         <TextView
+            android:textSize="10dp"
             android:id="@+id/name_artist"
             android:layout_margin="5dp"
             android:layout_width="match_parent"

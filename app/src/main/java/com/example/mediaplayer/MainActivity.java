@@ -21,12 +21,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mapping();
         openFragment();
-    }
-    // mapping
-    private void mapping()
-    {
     }
     // open fragment
     private void openFragment()
@@ -35,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         mFragmentTransaction = mFragmentManager.beginTransaction();
         mFragmentTransaction.replace(R.id.frame_music_control,new ControlMusicFragment());
         mFragmentTransaction.replace(R.id.frame_music_contains,new MyMusicFragment());
+        mFragmentTransaction.replace(R.id.frame_music_mode,new ModeMusicFragment());
         mFragmentTransaction.commit();
     }
 

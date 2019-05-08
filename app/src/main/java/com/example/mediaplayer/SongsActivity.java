@@ -1,10 +1,12 @@
 package com.example.mediaplayer;
 
+import android.media.MediaMetadataRetriever;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.mediaplayer.ClassLayer.Songs;
 import com.example.mediaplayer.ClassLayer.SongsAdapter;
@@ -18,6 +20,7 @@ public class SongsActivity extends AppCompatActivity {
     private ListView mListSong;
     private ArrayList<Songs> mArraySongs;
     private SongsAdapter mSongAdapter;
+    private MediaMetadataRetriever mMediaMeta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +36,11 @@ public class SongsActivity extends AppCompatActivity {
     private void addSongs()
     {
         mArraySongs = new ArrayList<>();
-        mArraySongs.add(new Songs("Lon Roi Con Khoc Nhe","Truc Nhan","NhacCuaTui",R.raw.lonroiconkhocnhe));
+        mArraySongs.add(new Songs("Ngồi hát đở buồn","Trúc Nhân","NhacCuaTui",R.raw.ngoihatdobuon));
+        mArraySongs.add(new Songs("Về bên anh","Jack","NhacCuaTui",R.raw.vebenanh));
+        mArraySongs.add(new Songs("Lớn rồi còn khóc nhè","Trúc Nhân","NhacCuaTui",R.raw.lonroiconkhocnhe));
+        mArraySongs.add(new Songs("Thương em là điều anh không thể","Noo Phước Thịnh","NhacCuaTui"
+                ,R.raw.thuongemladieuanhkhongthe));
     }
     // open fragment
     private void openFragment()
