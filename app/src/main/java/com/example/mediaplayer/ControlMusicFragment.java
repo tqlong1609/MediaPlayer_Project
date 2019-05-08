@@ -8,6 +8,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -20,6 +22,8 @@ public class ControlMusicFragment extends Fragment {
     private ImageView mPlayPause;
     private Intent mIntent;
     private ImageView mNext, mPrevious;
+    private Animation mTotaleDisk;
+    private ImageView mDisk;
 
     private boolean mIsPlay = false;
 
@@ -27,6 +31,7 @@ public class ControlMusicFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         mView = inflater.inflate(R.layout.fragment_control_music,container,false);
+        mTotaleDisk = AnimationUtils.loadAnimation(getContext(),R.anim.disk_rotate);
         mapping();
         openPlaySong();
         controlSongs();
@@ -41,11 +46,13 @@ public class ControlMusicFragment extends Fragment {
                 if(!mIsPlay) {
                     mPlayPause.setImageResource(R.drawable.ic_play);
                     mIsPlay = true;
+                    mDisk.startAnimation(mTotaleDisk);
                 }
                 else
                 {
                     mPlayPause.setImageResource(R.drawable.ic_stop);
                     mIsPlay = false;
+                    mDisk.clearAnimation();
                 }
             }
         });
@@ -81,5 +88,6 @@ public class ControlMusicFragment extends Fragment {
         mPlayPause = mView.findViewById(R.id.button_stop_play);
         mNext = mView.findViewById(R.id.next);
         mPrevious = mView.findViewById(R.id.button_previous);
+        mDisk = mView.findViewById(R.id.disk);
     }
 }

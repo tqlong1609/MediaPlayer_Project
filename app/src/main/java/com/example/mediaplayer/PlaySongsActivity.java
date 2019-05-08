@@ -1,9 +1,12 @@
 package com.example.mediaplayer;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.ContextMenu;
 import android.view.View;
+import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
@@ -17,7 +20,9 @@ public class PlaySongsActivity extends AppCompatActivity {
     private Boolean mIsFavorites = false;
     private Models mModel = Models.nomal;
     private Animation mRotateDisk;
+    private ImageButton mTimeOff;
     private ImageView mDisk;
+    private ImageButton mAddPlaylist;
 
     private enum Models{ shuffle, nomal, repeat }
 
@@ -27,6 +32,8 @@ public class PlaySongsActivity extends AppCompatActivity {
         mPlayStop = findViewById(R.id.play_stop);
         mFavorites = findViewById(R.id.favorites);
         mDisk = findViewById(R.id.disk);
+        mTimeOff = findViewById(R.id.time_off);
+        mAddPlaylist = findViewById(R.id.choose_playlist);
     }
 
     @Override
@@ -92,6 +99,24 @@ public class PlaySongsActivity extends AppCompatActivity {
                     mFavorites.setImageResource(R.drawable.ic_love);
                     mIsFavorites = true;
                 }
+            }
+        });
+        mTimeOff.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Dialog dialog = new Dialog(PlaySongsActivity.this);
+                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                dialog.setContentView(R.layout.time_off_dialog);
+                dialog.show();
+            }
+        });
+        mAddPlaylist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Dialog dialog = new Dialog(PlaySongsActivity.this);
+                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                dialog.setContentView(R.layout.add_playlist_dialog);
+                dialog.show();
             }
         });
     }

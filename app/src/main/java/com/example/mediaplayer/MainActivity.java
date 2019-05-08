@@ -1,6 +1,7 @@
 package com.example.mediaplayer;
 
 import android.content.Intent;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
@@ -32,6 +33,23 @@ public class MainActivity extends AppCompatActivity {
         mFragmentTransaction.replace(R.id.frame_music_contains,new MyMusicFragment());
         mFragmentTransaction.replace(R.id.frame_music_mode,new ModeMusicFragment());
         mFragmentTransaction.commit();
+    }
+
+    @Override
+    public void onBackPressed() {
+        FragmentManager mFragmentManager = getSupportFragmentManager();
+        Fragment fragment = mFragmentManager.findFragmentById(R.id.frame_music_contains);
+
+        if(fragment != null)
+        {
+            mFragmentTransaction = mFragmentManager.beginTransaction();
+            mFragmentTransaction.remove(fragment);
+            mFragmentTransaction.add(R.id.frame_music_contains,new MyMusicFragment());
+            mFragmentTransaction.commit();
+        }
+        else {
+            super.onBackPressed();
+        }
     }
 
     @Override

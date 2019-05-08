@@ -45,6 +45,7 @@
             <TextView
                 android:textSize="20dp"
                 android:text="80"
+                android:textColor="#FAF6F6"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="0dp" />
@@ -53,7 +54,8 @@
             android:src="@drawable/ic_next_page"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="match_parent" />
+            android:layout_marginTop="20dp"
+            android:layout_height="50dp" />
 
     </LinearLayout>
     <LinearLayout
@@ -86,6 +88,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp" />
             <TextView
+                android:textColor="#FAF6F6"
+
                 android:textSize="20dp"
                 android:text="1"
                 android:layout_weight="1"
@@ -93,10 +97,12 @@
                 android:layout_height="0dp" />
         </LinearLayout>
         <ImageView
+
             android:src="@drawable/ic_next_page"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="match_parent" />
+            android:layout_marginTop="20dp"
+            android:layout_height="50dp" />
 
     </LinearLayout>
     <LinearLayout
@@ -129,6 +135,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp" />
             <TextView
+                android:textColor="#FAF6F6"
+
                 android:textSize="20dp"
                 android:text="1"
                 android:layout_weight="1"
@@ -139,7 +147,8 @@
             android:src="@drawable/ic_next_page"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="match_parent" />
+            android:layout_marginTop="20dp"
+            android:layout_height="50dp" />
 
     </LinearLayout>
     <LinearLayout
@@ -172,6 +181,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp" />
             <TextView
+                android:textColor="#FAF6F6"
+
                 android:textSize="20dp"
                 android:text="1"
                 android:layout_weight="1"
@@ -183,7 +194,8 @@
             android:src="@drawable/ic_next_page"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="match_parent" />
+            android:layout_marginTop="20dp"
+            android:layout_height="50dp" />
 
     </LinearLayout>
     <LinearLayout
@@ -216,6 +228,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp" />
             <TextView
+                android:textColor="#FAF6F6"
+
                 android:textSize="20dp"
                 android:text="1"
                 android:layout_weight="1"
@@ -226,7 +240,8 @@
             android:src="@drawable/ic_next_page"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="match_parent" />
+            android:layout_marginTop="20dp"
+            android:layout_height="50dp" />
 
     </LinearLayout>
     <LinearLayout
@@ -259,6 +274,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp" />
             <TextView
+                android:textColor="#FAF6F6"
+
                 android:textSize="20dp"
                 android:text="1"
                 android:layout_weight="1"
@@ -269,7 +286,8 @@
             android:src="@drawable/ic_next_page"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="match_parent" />
+            android:layout_marginTop="20dp"
+            android:layout_height="50dp" />
 
     </LinearLayout>
 

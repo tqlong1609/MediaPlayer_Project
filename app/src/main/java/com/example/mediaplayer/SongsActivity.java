@@ -1,10 +1,13 @@
 package com.example.mediaplayer;
 
-import android.media.MediaMetadataRetriever;
+import android.app.Dialog;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -20,7 +23,7 @@ public class SongsActivity extends AppCompatActivity {
     private ListView mListSong;
     private ArrayList<Songs> mArraySongs;
     private SongsAdapter mSongAdapter;
-    private MediaMetadataRetriever mMediaMeta;
+    private ImageButton mChoose;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +34,17 @@ public class SongsActivity extends AppCompatActivity {
         addSongs();
         mSongAdapter = new SongsAdapter(this,R.layout.songs,mArraySongs);
         mListSong.setAdapter(mSongAdapter);
+        clickListSong();
     }
+    private void clickListSong()
+    {
+        mListSong.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+            }
+        });
+    }
     private void addSongs()
     {
         mArraySongs = new ArrayList<>();

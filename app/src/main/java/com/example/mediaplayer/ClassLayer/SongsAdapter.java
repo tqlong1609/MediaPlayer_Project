@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.mediaplayer.R;
@@ -48,7 +47,6 @@ public class SongsAdapter extends BaseAdapter {
         convertView = mLayoutInflater.inflate(mLayout,null);
         TextView mTitleSong = convertView.findViewById(R.id.name_song);
         TextView mNameArtist = convertView.findViewById(R.id.name_artist);
-        ImageButton mMenu = convertView.findViewById(R.id.button_menu);
         Songs songs = mSongList.get(position);
         mTitleSong.setText(songs.getmTitle());
         mNameArtist.setText(songs.getmArtist());

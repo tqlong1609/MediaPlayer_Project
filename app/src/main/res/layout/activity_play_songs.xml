@@ -3,7 +3,10 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:weightSum="8"
-    xmlns:android="http://schemas.android.com/apk/res/android" >
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#0E0E0D"
+
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,12 +24,15 @@
             >
             <TextView
                 android:layout_margin="5dp"
-                android:textColor="#11110F"
+                android:textColor="#B42ECC"
+
                 android:textSize="20dp"
                 android:text="Name Song"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <TextView
+                android:textColor="#8D3DA0"
+
                 android:layout_margin="5dp"
                 android:textSize="15dp"
                 android:text="Name Artist"
@@ -36,6 +42,7 @@
         </LinearLayout>
 
         <ImageButton
+            android:id="@+id/time_off"
             android:layout_margin="5dp"
             android:background="@null"
             android:scaleType="centerInside"
@@ -83,12 +90,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp">
                 <TextView
+                    android:textColor="#F8F0F0"
                     android:textSize="10dp"
                     android:layout_margin="10dp"
                     android:text="0:00"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
+                    android:textColor="#F8F0F0"
+
                     android:textSize="10dp"
                     android:layout_alignParentRight="true"
                     android:layout_margin="10dp"
@@ -103,9 +113,10 @@
                 android:layout_weight="1"/>
         </LinearLayout>
         <ImageButton
+            android:id="@+id/choose_playlist"
             android:background="@null"
             android:scaleType="centerInside"
-            android:src="@drawable/ic_menu_songs_control"
+            android:src="@drawable/ic_playlist"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"/>
